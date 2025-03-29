@@ -1,0 +1,1613 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Top 10 Must-Try Malaysian Dishes | Discover Malaysia</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      /* Modern Color Scheme and Variables */
+      :root {
+        --primary-color: #e74c3c;
+        --secondary-color: #2c3e50;
+        --accent-color: #f39c12;
+        --text-color: #2c3e50;
+        --background-color: #f9fafb;
+        --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        --hover-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      /* Global Styles */
+      body {
+        background-color: var(--background-color);
+        font-family: "Poppins", sans-serif;
+        color: var(--text-color);
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Header Styles */
+      .page-header {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url("https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg");
+        background-size: cover;
+        background-position: center;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .header-content {
+        color: white;
+        max-width: 800px;
+        padding: 0 2rem;
+      }
+
+      .header-content h1 {
+        font-size: 3.5rem;
+        margin: 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        animation: fadeInDown 1s ease-out;
+      }
+
+      .subtitle {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+        opacity: 0.9;
+        animation: fadeInUp 1s ease-out 0.5s both;
+      }
+
+      /* Enhanced Container Styles */
+      .dishes-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      /* Enhanced Grid Layout */
+      .dishes-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2.5rem;
+        padding: 1rem;
+      }
+
+      /* Enhanced Card Styles */
+      .dish-card {
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: var(--card-shadow);
+        transition: var(--transition);
+        position: relative;
+        animation: fadeIn 0.6s ease-out;
+      }
+
+      .dish-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--hover-shadow);
+      }
+
+      /* Enhanced Image Styles */
+      .dish-image {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+      }
+
+      .dish-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: var(--transition);
+      }
+
+      .dish-card:hover .dish-image img {
+        transform: scale(1.1);
+      }
+
+      /* Enhanced Badge Styles */
+      .dish-number {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        background: var(--primary-color);
+        color: white;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1.2rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dish-badge {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: var(--accent-color);
+        color: white;
+        padding: 0.6rem 1.2rem;
+        border-radius: 25px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+      }
+
+      /* Enhanced Info Styles */
+      .dish-info {
+        padding: 2rem;
+      }
+
+      .dish-info h2 {
+        color: var(--secondary-color);
+        margin: 0 0 1rem 0;
+        font-size: 1.8rem;
+        font-weight: 600;
+      }
+
+      .dish-info p {
+        color: #666;
+        margin-bottom: 1.5rem;
+        line-height: 1.8;
+      }
+
+      /* Enhanced Price Tag */
+      .price {
+        display: inline-block;
+        padding: 0.8rem 1.5rem;
+        background: var(--secondary-color);
+        color: white;
+        border-radius: 25px;
+        font-weight: 500;
+        font-size: 1rem;
+        transition: var(--transition);
+      }
+
+      .dish-card:hover .price {
+        background: var(--primary-color);
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Responsive Design */
+      @media (max-width: 1024px) {
+        .header-content h1 {
+          font-size: 2.8rem;
+        }
+
+        .dishes-grid {
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 2rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .header-content h1 {
+          font-size: 2.2rem;
+        }
+
+        .subtitle {
+          font-size: 1.2rem;
+        }
+
+        .dish-image {
+          height: 250px;
+        }
+
+        .dishes-container {
+          padding: 1rem;
+        }
+      }
+
+      /* Loading Animation */
+      .loading-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+      }
+
+      .dishes-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      .category-nav {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+      }
+
+      .cat-btn {
+        padding: 0.8rem 1.5rem;
+        border: none;
+        border-radius: 25px;
+        background: #f5f5f5;
+        color: #333;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .cat-btn.active {
+        background: #2c3e50;
+        color: white;
+      }
+
+      .dishes-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .intro-section {
+        text-align: center;
+        margin-bottom: 3rem;
+        padding: 2rem;
+        background: var(--light-gray);
+        border-radius: 15px;
+      }
+
+      .intro-section h1 {
+        color: var(--primary-color);
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .intro-text {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: var(--text-color);
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .dish-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        margin-bottom: 2rem;
+      }
+
+      .dish-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .dish-image-container {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+      }
+
+      .dish-image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .dish-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0.6)
+        );
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1rem;
+        color: white;
+      }
+
+      .dish-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+
+      .dish-title h2 {
+        color: var(--primary-color);
+        margin: 0;
+        font-size: 1.5rem;
+      }
+
+      .dish-description {
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+      }
+
+      .dish-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1rem;
+      }
+
+      .rating {
+        color: #f1c40f;
+      }
+
+      .location {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+        color: #666;
+        font-size: 0.9rem;
+      }
+
+      .location i {
+        color: #e74c3c;
+      }
+
+      .rating-container {
+        text-align: right;
+      }
+
+      .stars {
+        color: #f1c40f;
+        margin-bottom: 0.2rem;
+      }
+
+      .rating-text {
+        font-size: 0.8rem;
+        color: #666;
+      }
+
+      .dish-details {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        margin: 1rem 0;
+        padding: 1rem 0;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+      }
+
+      .detail-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.9rem;
+        color: #666;
+      }
+
+      .detail-item i {
+        color: #3498db;
+      }
+
+      .price-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1rem;
+      }
+
+      .price-range {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .price-tag {
+        font-size: 0.8rem;
+        color: #27ae60;
+        margin-top: 0.2rem;
+      }
+
+      .find-locations {
+        padding: 0.5rem 1rem;
+        background: #3498db;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: all 0.3s ease;
+      }
+
+      .find-locations:hover {
+        background: #2980b9;
+        transform: translateY(-2px);
+      }
+
+      .dish-expanded-info {
+        padding: 1.5rem;
+        border-top: 1px solid #eee;
+        display: none;
+      }
+
+      .dish-card.expanded .dish-expanded-info {
+        display: block;
+      }
+
+      @keyframes slideDown {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .dish-expanded-info.active {
+        display: block;
+        animation: slideDown 0.3s ease forwards;
+      }
+
+      /* Loading animation */
+      .loading::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 30px;
+        height: 30px;
+        border: 3px solid #f3f3f3;
+        border-top: 3px solid var(--accent-color);
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        transform: translate(-50%, -50%);
+      }
+
+      @keyframes spin {
+        0% {
+          transform: translate(-50%, -50%) rotate(0deg);
+        }
+        100% {
+          transform: translate(-50%, -50%) rotate(360deg);
+        }
+      }
+
+      /* Add loading state */
+      .dish-image-container::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 30px;
+        height: 30px;
+        border: 3px solid #f3f3f3;
+        border-top: 3px solid #e74c3c;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+      }
+
+      .dish-image-container.loading::before {
+        opacity: 1;
+      }
+
+      .loading-spinner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 40px;
+        height: 40px;
+        border: 4px solid rgba(255, 255, 255, 0.3);
+        border-top: 4px solid #ffffff;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        display: none;
+      }
+
+      .dish-image-container.loading .loading-spinner {
+        display: block;
+      }
+
+      .dish-image-container.error::before {
+        content: "Image not available";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #666;
+        font-size: 0.9rem;
+      }
+
+      /* Blur-up loading effect */
+      .dish-image-container img.loading {
+        filter: blur(10px);
+        transition: filter 0.3s ease;
+      }
+
+      .dish-image-container img.loaded {
+        filter: blur(0);
+      }
+
+      /* Add new styles */
+      .dish-gallery {
+        position: relative;
+        width: 100%;
+        height: 400px;
+      }
+
+      .main-image {
+        position: relative;
+        width: 100%;
+        height: 350px;
+        overflow: hidden;
+      }
+
+      .main-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .thumbnail-strip {
+        display: flex;
+        gap: 10px;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.05);
+      }
+
+      .thumbnail-strip img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .thumbnail-strip img.active {
+        border: 2px solid #3498db;
+      }
+
+      .gallery-nav button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .prev-img {
+        left: 10px;
+      }
+      .next-img {
+        right: 10px;
+      }
+
+      .image-counter {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 15px;
+        font-size: 0.8rem;
+      }
+
+      /* Enhanced rating styles */
+      .rating-section {
+        margin: 15px 0;
+        padding: 15px;
+        background: #f8f9fa;
+        border-radius: 10px;
+      }
+
+      .stars-outer {
+        position: relative;
+        display: inline-block;
+      }
+
+      .stars-inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 0;
+      }
+
+      .stars-outer::before {
+        content: "★★★★★";
+        color: #ccc;
+      }
+
+      .stars-inner::before {
+        content: "★★★★★";
+        color: #f8ce0b;
+      }
+
+      /* Map styles */
+      .restaurant-map {
+        height: 200px;
+        margin: 15px 0;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      /* Review section styles */
+      .review-form {
+        padding: 20px;
+        background: #f8f9fa;
+        border-radius: 10px;
+        margin: 15px 0;
+      }
+
+      .star-rating i {
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: #f8ce0b;
+        transition: all 0.2s ease;
+      }
+
+      .review-form textarea {
+        width: 100%;
+      }
+
+      /* New Advanced Styles */
+      .dish-gallery-container {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        background: #f8f9fa;
+        border-radius: 15px 15px 0 0;
+        overflow: hidden;
+      }
+
+      .gallery-main {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .gallery-view {
+        position: relative;
+        flex: 1;
+        overflow: hidden;
+      }
+
+      .main-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .view-controls {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        display: flex;
+        gap: 10px;
+      }
+
+      .view-controls button {
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .gallery-thumbnails {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        gap: 10px;
+        background: rgba(0, 0, 0, 0.05);
+      }
+
+      .thumb-container {
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      .thumb-container::-webkit-scrollbar {
+        display: none;
+      }
+
+      .thumb-container img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .thumb-container img.active {
+        border: 2px solid #3498db;
+        transform: scale(1.1);
+      }
+
+      .info-panel {
+        padding: 20px;
+        background: white;
+        border-radius: 0 0 15px 15px;
+      }
+
+      .panel-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .quick-actions {
+        display: flex;
+        gap: 10px;
+      }
+
+      .quick-actions button {
+        background: none;
+        border: none;
+        font-size: 1.2rem;
+        color: #666;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .metrics {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+
+      .feature-tabs {
+        margin-top: 20px;
+      }
+
+      .tab-nav {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #eee;
+      }
+
+      .tab-btn {
+        padding: 10px 20px;
+        border: none;
+        background: none;
+        color: #666;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .tab-btn.active {
+        color: #3498db;
+        border-bottom: 2px solid #3498db;
+      }
+
+      .tab-pane {
+        display: none;
+      }
+
+      .tab-pane.active {
+        display: block;
+        animation: fadeIn 0.3s ease;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .dish-gallery-container {
+          height: 300px;
+        }
+
+        .metrics {
+          flex-direction: column;
+          gap: 15px;
+        }
+
+        .tab-nav {
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+        }
+      }
+
+      .ar-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        z-index: 1000;
+      }
+
+      .ar-content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      .close-ar {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: white;
+        font-size: 30px;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+
+      .loyalty-popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        width: 90%;
+        max-width: 400px;
+      }
+
+      .points-display {
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      .points {
+        font-size: 48px;
+        color: #3498db;
+        font-weight: bold;
+      }
+
+      .rewards-progress {
+        margin: 20px 0;
+      }
+
+      .progress-bar {
+        height: 10px;
+        background: #eee;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+
+      .progress {
+        height: 100%;
+        background: #3498db;
+        transition: width 0.3s ease;
+      }
+
+      .social-engagement {
+        margin-top: 20px;
+        padding: 20px;
+        background: #f8f9fa;
+        border-radius: 15px;
+      }
+
+      .social-stats {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+      }
+
+      .stat-item {
+        text-align: center;
+      }
+
+      .user-photos-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin: 20px 0;
+      }
+
+      .smart-booking {
+        margin-top: 20px;
+        padding: 20px;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .booking-options {
+        display: flex;
+        gap: 20px;
+        margin-top: 15px;
+      }
+
+      .quick-book {
+        flex: 1;
+        text-align: center;
+      }
+
+      .advanced-book {
+        flex: 2;
+      }
+
+      .book-now {
+        background: #3498db;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .book-now:hover {
+        background: #2980b9;
+        transform: translateY(-2px);
+      }
+
+      .wait-time {
+        display: block;
+        margin-top: 10px;
+        font-size: 0.9rem;
+        color: #666;
+      }
+
+      /* Animation classes */
+      .fade-in {
+        animation: fadeIn 0.3s ease forwards;
+      }
+
+      .slide-up {
+        animation: slideUp 0.3s ease forwards;
+      }
+
+      @keyframes slideUp {
+        from {
+          transform: translateY(20px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .booking-options {
+          flex-direction: column;
+        }
+
+        .user-photos-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      .dish-tags {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .tag {
+        background: rgba(52, 152, 219, 0.9);
+        color: white;
+        padding: 0.3rem 0.8rem;
+        border-radius: 15px;
+        font-size: 0.8rem;
+      }
+
+      .variants {
+        margin: 0.5rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .variant-tag {
+        background: #f39c12;
+        color: white;
+        padding: 0.3rem 0.8rem;
+        border-radius: 15px;
+        font-size: 0.8rem;
+      }
+
+      /* Enhanced hover effects */
+      .dish-card:hover .dish-image img {
+        transform: scale(1.05);
+      }
+
+      /* Loading animation */
+      .dish-image::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #f5f5f5;
+        z-index: -1;
+      }
+
+      /* Category headers */
+      .dish-category h2 {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 2rem;
+      }
+
+      .dish-category h2::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(to right, #3498db, #2ecc71);
+        border-radius: 3px;
+      }
+
+      /* Responsive improvements */
+      @media (max-width: 768px) {
+        .dish-category {
+          margin-bottom: 2rem;
+        }
+
+        .dish-image {
+          height: 200px;
+        }
+
+        .variants {
+          flex-wrap: wrap;
+        }
+      }
+
+      .dish-image {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+        background: #f5f5f5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .dish-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+        aspect-ratio: 16/9;
+      }
+
+      /* Added new styles for larger screens */
+      @media (min-width: 1024px) {
+        .dishes-grid {
+          grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+          gap: 2.5rem;
+        }
+
+        .dish-image {
+          height: 350px;
+        }
+      }
+
+      /* Updated mobile styles */
+      @media (max-width: 768px) {
+        .dish-image {
+          height: 250px;
+        }
+
+        .dishes-grid {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+      }
+
+      /* Updated variant tags specifically for Biryani */
+      .dish-card:last-child .variant-tag {
+        background: #c0392b;
+        color: white;
+      }
+
+      .dish-card:last-child .dish-badge {
+        background: #8e44ad;
+      }
+
+      /* New styles for image gallery */
+      .dish-gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+        margin: 1rem 0;
+      }
+
+      .gallery-img {
+        width: 100%;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+      }
+
+      .gallery-img:hover {
+        transform: scale(1.05);
+      }
+
+      /* Fallback image handling */
+      .dish-image img[src=""] {
+        display: none;
+      }
+
+      .dish-image img:not([src=""]) {
+        display: block;
+      }
+
+      @media (max-width: 768px) {
+        .dish-gallery {
+          grid-template-columns: repeat(3, 1fr);
+          height: 60px;
+        }
+
+        .gallery-img {
+          height: 60px;
+        }
+      }
+
+      /* Updated Curry Puff */
+      .dish-card:nth-last-child(-n + 2) .dish-image {
+        height: 300px; /* Ensuring same height as others */
+      }
+
+      /* Updated Nasi Biryani */
+      .dish-card:nth-last-child(-n + 2) .dish-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .dish-image,
+        .dish-card:nth-last-child(-n + 2) .dish-image {
+          height: 250px;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .dish-image,
+        .dish-card:nth-last-child(-n + 2) .dish-image {
+          height: 350px;
+        }
+      }
+
+      .dish-section {
+        margin-bottom: 2rem;
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .dish-image {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .dish-info {
+        padding: 2rem;
+      }
+
+      .dish-section h2 {
+        padding: 1.5rem;
+        margin: 0;
+        background: #f8f9fa;
+        border-bottom: 1px solid #eee;
+      }
+
+      .dish-section:hover .dish-image {
+        transform: scale(1.05);
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .dish-image {
+          height: 200px;
+        }
+        
+        .dish-info {
+          padding: 1rem;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .dish-image {
+          height: 350px;
+        }
+      }
+
+      .lead {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        color: #666;
+        margin-bottom: 2rem;
+      }
+
+      /* Center the content */
+      .blog-post-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      .post-content {
+        margin-top: 2rem;
+      }
+
+      .title-section {
+        text-align: center;
+        padding: 2rem 0;
+        margin-bottom: 2rem;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
+
+      .title-section h1 {
+        color: var(--primary-color);
+        font-size: 2.5rem;
+        margin: 0;
+        padding: 0 1rem;
+      }
+
+      @media (max-width: 768px) {
+        .title-section h1 {
+            font-size: 2rem;
+        }
+      }
+
+      .blog-post-container {
+        padding-top: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header & Navigation -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">Discover Malaysia</div>
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../destinations.html">Destinations</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="blog-post-container">
+      <article class="blog-post-full">
+        <div class="blog-content">
+          <div class="title-section">
+            <h1>Top 10 Must-Try Malaysian Dishes</h1>
+          </div>
+
+          <div class="post-content">
+            <p class="lead">
+              Malaysian cuisine is a delightful fusion of Malay, Chinese, and Indian influences, 
+              creating a unique and vibrant food culture. Here are ten iconic Malaysian dishes 
+              that you absolutely must try during your visit:
+            </p>
+
+            <!-- 1. Chapati -->
+            <section class="dish-section">
+              <h2>1. Chapati</h2>
+              <img
+                src="https://images.pexels.com/photos/2474661/pexels-photo-2474661.jpeg"
+                alt="Fresh Chapati with Curry"
+                class="dish-image"
+              />
+              <div class="dish-info">
+                <p>
+                  A staple in Malaysian-Indian cuisine, Chapati is a soft, round flatbread made from whole wheat flour. 
+                  Served hot and fresh off the griddle, it's perfect for scooping up curries, dhal, or enjoyed with 
+                  a side of curry sauce. This versatile bread is a popular breakfast choice and is available throughout 
+                  the day at Malaysian-Indian restaurants.
+                </p>
+                <h3>Where to Find:</h3>
+                <ul>
+                  <li>Restoran Sri Nirwana Maju, Bangsar</li>
+                  <li>Raj's Banana Leaf, Petaling Jaya</li>
+                  <li>Moorthy's Mathai Restaurant, Kuala Lumpur</li>
+                </ul>
+              </div>
+            </section>
+
+            <!-- 2. Laksa -->
+            <section class="dish-section">
+              <h2>2. Laksa</h2>
+              <img
+                src="https://images.pexels.com/photos/6646351/pexels-photo-6646351.jpeg"
+                alt="Penang Asam Laksa"
+                class="dish-image"
+              />
+              <div class="dish-info">
+                <p>
+                  A spicy noodle soup that comes in many varieties. Penang Asam Laksa is particularly 
+                  famous, featuring thick rice noodles in a tangy, spicy fish-based broth with 
+                  tamarind, lemongrass, and fresh herbs.
+                </p>
+                <h3>Where to Find:</h3>
+                <ul>
+                  <li>Air Itam Laksa, Penang</li>
+                  <li>Jonker 88, Melaka</li>
+                  <li>Laksa Shack, Kuala Lumpur</li>
+                </ul>
+              </div>
+            </section>
+
+            <!-- 3. Satay -->
+            <section class="dish-section">
+              <h2>3. Satay</h2>
+              <img
+                src="https://images.pexels.com/photos/2098143/pexels-photo-2098143.jpeg"
+                alt="Malaysian Satay with peanut sauce"
+                class="dish-image"
+              />
+              <div class="dish-info">
+                <p>
+                  Grilled skewered meat (chicken, beef, or lamb) marinated in turmeric and spices, 
+                  served with a rich peanut sauce, cucumber, and rice cakes (ketupat).
+                </p>
+                <h3>Where to Find:</h3>
+                <ul>
+                  <li>Sate Kajang Hj Samuri, Various Locations</li>
+                  <li>Lau Di Fang Satay, Petaling Jaya</li>
+                  <li>Satay Zul, Kuala Lumpur</li>
+                </ul>
+              </div>
+            </section>
+
+            <!-- 4. Rendang -->
+            <section class="dish-section">
+              <h2>4. Rendang</h2>
+              <img
+                src="https://images.pexels.com/photos/7426864/pexels-photo-7426864.jpeg"
+                alt="Beef Rendang"
+                class="dish-image"
+              />
+              <div class="dish-info">
+                <p>
+                  Slow-cooked meat in coconut milk and spices until tender and caramelized.
+                </p>
+              </div>
+            </section>
+
+            <!-- 5. Char Kway Teow -->
+            <section class="dish-section">
+              <h2>5. Char Kway Teow</h2>
+              <img
+                src="https://images.pexels.com/photos/9609838/pexels-photo-9609838.jpeg"
+                alt="Char Kway Teow"
+                class="dish-image"
+              />
+              <div class="dish-info">
+                <p>
+                  Stir-fried flat rice noodles with prawns, cockles, Chinese sausage, and bean sprouts.
+                </p>
+              </div>
+            </section>
+
+            <!-- 6. Roti Canai -->
+            <section class="dish-section">
+              <h2>6. Roti Canai</h2>
+              <img
+                src="https://images.pexels.com/photos/2664216/pexels-photo-2664216.jpeg"
+                alt="Roti Canai"
+                class="dish-image"
+              />
+              <div class="dish-info">
+                <p>
+                  Flaky flatbread served with curry sauce, a popular breakfast choice.
+                </p>
+              </div>
+            </section>
+
+            <!-- 7. Nasi Goreng -->
+            <section class="dish-section">
+              <h2>7. Nasi Goreng</h2>
+              <img
+                src="https://images.pexels.com/photos/723198/pexels-photo-723198.jpeg"
+                alt="Nasi Goreng"
+                class="dish-image"
+              />
+              <div class="dish-info">
+                <p>
+                  Malaysian fried rice with shrimp paste, chili, and various accompaniments.
+                </p>
+              </div>
+            </section>
+
+            <!-- 8. Curry Puff -->
+            <section class="dish-section">
+              <h2>8. Curry Puff</h2>
+              <img
+                src="https://images.pexels.com/photos/14537698/pexels-photo-14537698.jpeg"
+                alt="Curry Puff"
+                class="dish-image"
+              />
+              <div class="dish-info">
+                <p>
+                  Flaky pastry filled with curried chicken, potatoes, and eggs.
+                </p>
+              </div>
+            </section>
+
+            <!-- 9. Hokkien Mee -->
+            <section class="dish-section">
+              <h2>9. Hokkien Mee</h2>
+              <img
+                src="https://images.pexels.com/photos/1731535/pexels-photo-1731535.jpeg"
+                alt="Hokkien Mee"
+                class="dish-image"
+              />
+              <div class="dish-info">
+                <p>
+                  Thick noodles in rich dark soy sauce with pork, seafood, and vegetables.
+                </p>
+              </div>
+            </section>
+
+            <!-- 10. Durian -->
+            <section class="dish-section">
+              <h2>10. Durian</h2>
+              <img
+                src="https://images.pexels.com/photos/2894205/pexels-photo-2894205.jpeg"
+                alt="Durian"
+                class="dish-image"
+              />
+              <div class="dish-info">
+                <p>
+                  The 'King of Fruits' - creamy, pungent, and uniquely Malaysian.
+                </p>
+              </div>
+            </section>
+          </div>
+
+          <div class="post-navigation">
+            <a href="../blog.html" class="back-to-blog">
+              <i class="fas fa-arrow-left"></i> Back to Blog
+            </a>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <p>Discover Malaysia is your guide to exploring the beauty and culture of Malaysia.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../destinations.html">Destinations</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 Discover Malaysia. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>
